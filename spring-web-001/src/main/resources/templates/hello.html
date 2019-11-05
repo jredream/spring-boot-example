@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+
+<section>
+    <h2 th:text="${author.name}"></h2>
+    <p>年龄：<span th:text="${author.age}"></span></p>
+    <p>邮箱：<span th:text="${author.email}"></span></p>
+</section>
+
+<section>
+    <h2>擅长</h2>
+    <ul>
+        <li th:each="adept: ${adeptList}" th:text="${adept}"></li>
+    </ul>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>错误页</title>
+
+    <style>
+        h1, h2 {
+            padding-bottom: .3em;
+            border-bottom: 1px solid #eaecef;
+        }
+        pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f6f8fa;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <h1>哎呦呦，出错啦！</h1>
+
+    <pre id="json">
+    </pre>
+
+</section>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    var data = [[${errorContent}]];
+
+    /*]]>*/
+
+    document.getElementById("json").innerText = JSON.stringify(data, null, 2);
+    console.log(data);
+</script>
+
+</body>
+</html>
