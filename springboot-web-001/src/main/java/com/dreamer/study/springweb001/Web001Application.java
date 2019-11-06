@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author mac
  */
 @SpringBootApplication
-public class SpringWeb001Application {
+public class Web001Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringWeb001Application.class, args);
+        SpringApplication.run(Web001Application.class, args);
     }
 
 }
