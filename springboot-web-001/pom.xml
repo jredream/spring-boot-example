@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.dreamer.study</groupId>
-    <artifactId>spring-web-001</artifactId>
+    <artifactId>springboot-web-001</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>spring-web-001</name>
+    <name>springboot-web-001</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
