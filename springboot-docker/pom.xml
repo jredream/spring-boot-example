@@ -8,8 +8,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>springboot-docker-002</artifactId>
-    <name>springboot-docker-002</name>
+    <artifactId>springboot-docker</artifactId>
+    <name>springboot-docker</name>
 
     <properties>
         <java.version>1.8</java.version>
