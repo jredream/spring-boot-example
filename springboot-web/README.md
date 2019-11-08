@@ -221,4 +221,54 @@ public class RequestUtils {
 ```
 
 ### 集成`Swagger`
-参考文档：https://www.ibm.com/developerworks/cn/java/j-using-swagger-in-a-spring-boot-project/index.html 
+* 参考文档：https://www.ibm.com/developerworks/cn/java/j-using-swagger-in-a-spring-boot-project/index.html
+* 添加依赖：
+```xml
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+</dependency>
+```
+
+```xml
+<!-- Swagger UI -->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+</dependency>
+```
+
+* 添加Swagger配置
+```java
+@Configuration
+@EnableSwagger2
+public class Swagger2Config {
+
+    @Bean
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.dreamer.study.springboot.web.controller"))
+                // 加了ApiOperation注解的类，才生成接口文档
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("Swagger APIs")
+                .description("swagger api 管理")
+                .termsOfServiceUrl("http://swagger.io/")
+                .contact(new Contact("mac", "http://www.xxx.com", "XXXXXXX@qq.com"))
+                .version("1.0")
+                .build();
+
+    }
+
+}
+```
+ 
