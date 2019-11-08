@@ -272,3 +272,48 @@ public class Swagger2Config {
 }
 ```
  
+### 集成`MyBatis-Plus`
+ 
+MyBatis-Plus文档和示例
+
+* 官网：https://mp.baomidou.com/
+* 快速开始：https://mp.baomidou.com/guide/quick-start.html#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E7%A8%8B
+* 官方示例：https://github.com/baomidou/mybatis-plus-samples
+ 
+简单说明：
+ 
+* 引入依赖
+```xml
+<dependency>
+    <groupId>com.baomidou</groupId>
+    <artifactId>mybatis-plus-boot-starter</artifactId>
+    <version>${mybatis-plus.version}</version>
+</dependency>
+```
+* 添加对应数据库的依赖
+
+H2
+```xml
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+MySql
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>${mysql.version}</version>
+</dependency>
+```
+
+添加MyBatis-Plus配置
+```java
+@Configuration
+@MapperScan("com.dreamer.study.springboot.web.mapper")
+public class MyBatisPlusConfig {
+}
+```

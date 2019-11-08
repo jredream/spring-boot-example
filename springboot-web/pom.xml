@@ -17,6 +17,7 @@
         <jackson.verions>2.10.0</jackson.verions>
         <swagger.version>2.9.2</swagger.version>
         <lombok.version>1.18.10</lombok.version>
+        <mybatis-plus.version>3.2.0</mybatis-plus.version>
     </properties>
 
     <dependencies>
@@ -70,6 +71,7 @@
             <version>${lombok.version}</version>
         </dependency>
 
+        <!-- Swagger -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -80,6 +82,21 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+
+        <!-- Mybatis Plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
+        <!-- MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
