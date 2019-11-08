@@ -2,6 +2,8 @@ package com.dreamer.study.springboot.web.controller;
 
 import com.dreamer.study.springboot.web.component.Author;
 import com.dreamer.study.springboot.web.exception.ServiceException;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,7 @@ import java.util.List;
 @Slf4j
 @Controller
 @RequestMapping("/hello")
+@Api(tags = "用户相关接口", description = "提供用户相关的 Rest API")
 public class HelloWorldController {
 
     @Resource
@@ -27,8 +30,9 @@ public class HelloWorldController {
 
     @ResponseBody
     @GetMapping("world")
-    public ResponseEntity word() {
-        return ResponseEntity.ok(author);
+    @ApiOperation("获取作者信息接口")
+    public Author word() {
+        return author;
     }
 
     @GetMapping("world/page")
