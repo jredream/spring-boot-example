@@ -1,8 +1,0 @@
-spring:
-  swagger:
-    enabled: true
-
-    security:
-      filter-plugin: true
-      username: admin
-      password: 123456

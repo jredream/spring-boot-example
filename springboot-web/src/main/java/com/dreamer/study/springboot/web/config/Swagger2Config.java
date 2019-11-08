@@ -33,11 +33,11 @@ public class Swagger2Config {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                 .title("Swagger APIs")
-                 .description("swagger api 管理")
-                 .termsOfServiceUrl("http://swagger.io/")
-                 .contact(new Contact("mac", "http://www.xxx.com", "XXXXXXX@qq.com"))
-                 .version("1.0")
+                .title("Swagger APIs")
+                .description("swagger api 管理")
+                .termsOfServiceUrl("http://swagger.io/")
+                .contact(new Contact("mac", "http://www.xxx.com", "XXXXXXX@qq.com"))
+                .version("1.0")
                 .build();
 
     }
