@@ -21,6 +21,7 @@
     <modules>
         <module>springboot-web</module>
         <module>springboot-docker</module>
+        <module>springboot-datasource</module>
     </modules>
 
     <dependencies>

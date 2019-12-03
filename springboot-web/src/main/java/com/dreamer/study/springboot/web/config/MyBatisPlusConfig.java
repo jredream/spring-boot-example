@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @author mac
  */
 @Configuration
-@MapperScan("com.dreamer.study.springboot.web.mapper")
+@MapperScan("com.dreamer.study.springboot.web.*.**mapper")
 public class MyBatisPlusConfig {
 }

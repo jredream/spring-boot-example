@@ -317,3 +317,7 @@ MySql
 public class MyBatisPlusConfig {
 }
 ```
+
+## Next ToDo
+* 多数据源支持
+* 基于Shiro的RBAC权限
